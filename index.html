@@ -1,118 +1,121 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>YouTube Clone</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <!-- Top Nav -->
-    <header class="top-nav">
-      <div class="nav-left">
-        <div class="menu-btn">☰</div>
-        <div class="logo">MyTube</div>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>YouTube Clone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Top Nav -->
+  <header class="top-nav">
+    <div class="nav-left">
+      <div class="menu-btn">☰</div>
+      <div class="logo">MyTube</div>
+    </div>
+
+    <div class="nav-center">
+      <input type="text" placeholder="Search" />
+      <button class="search-btn">
+        <!-- <img src="./assets/images/search-alt-svgrepo-com.svg" alt="Search" /> -->
+        🔍
+      </button>
+    </div>
+
+    <div class="nav-right">
+      <div class="avatar">L</div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-item active">Home</div>
+      <div class="sidebar-item">Shorts</div>
+      <div class="sidebar-item">Subscriptions</div>
+      <hr />
+      <div class="sidebar-item">Library</div>
+      <div class="sidebar-item">History</div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <div id="video-grid" class="video-grid">
+        <!-- JS will render videos here -->
+      </div>
+    </main>
+
+    <div class="mobile-sidebar">
+      <div class="mobile-menu">
+        <div class="mobile-item active">Home</div>
+        <div class="mobile-item">Shorts</div>
+        <div class="mobile-item">Subscriptions</div>
+        <div class="mobile-item">Library</div>
+        <div class="mobile-item">History</div>
       </div>
 
-      <div class="nav-center">
-        <input type="text" placeholder="Search" />
-        <button class="search-btn">
-          <!-- <img src="./assets/images/search-alt-svgrepo-com.svg" alt="Search" /> -->
-          🔍
-        </button>
-      </div>
-
-      <div class="nav-right">
-        <div class="avatar">L</div>
-      </div>
-    </header>
-
-    <div class="layout">
-      <!-- Sidebar -->
-      <aside class="sidebar">
-        <div class="sidebar-item active">Home</div>
-        <div class="sidebar-item">Shorts</div>
-        <div class="sidebar-item">Subscriptions</div>
-        <hr />
-        <div class="sidebar-item">Library</div>
-        <div class="sidebar-item">History</div>
-      </aside>
-
-      <!-- Main Content -->
-      <main class="content">
-        <div id="video-grid" class="video-grid">
-          <!-- JS will render videos here -->
-        </div>
-      </main>
-
-      <div class="mobile-sidebar">
-        <div class="mobile-menu">
-          <div class="mobile-item active">Home</div>
-          <div class="mobile-item">Shorts</div>
-          <div class="mobile-item">Subscriptions</div>
-          <div class="mobile-item">Library</div>
-          <div class="mobile-item">History</div>
-        </div>
-
-        <div class="mobile-subscriptions">
-          <h4>Subscriptions</h4>
-          <div class="subs-list">
-            <div class="sub-item">
-              <img src="./assets/images/gallery.png" alt="SolsticeMara" />
-              <span>SolsticeMara</span>
-            </div>
-            <div class="sub-item">
-              <img src="./assets/images/gallery.png" alt="Dev Simplified" />
-              <span>Dev Simplified</span>
-            </div>
-            <div class="sub-item">
-              <img src="./assets/images/gallery.png" alt="Low Level Graphics" />
-              <span>Low Level Graphics</span>
-            </div>
-            <div class="sub-item">
-              <img src="./assets/images/gallery.png" alt="Engine Talk" />
-              <span>Engine Talk</span>
-            </div>
-            <div class="sub-item">
-              <img src="./assets/images/gallery.png" alt="SolsticeMara" />
-              <span>SolsticeMara</span>
-            </div>
-            <div class="sub-item">
-              <img src="./assets/images/gallery.png" alt="Dev Simplified" />
-              <span>Dev Simplified</span>
-            </div>
-            <div class="sub-item">
-              <img src="./assets/images/gallery.png" alt="Low Level Graphics" />
-              <span>Low Level Graphics</span>
-            </div>
-            <div class="sub-item">
-              <img src="./assets/images/gallery.png" alt="Engine Talk" />
-              <span>Engine Talk</span>
-            </div>
-            <div class="sub-item">
-              <img src="./assets/images/gallery.png" alt="SolsticeMara" />
-              <span>SolsticeMara</span>
-            </div>
-            <div class="sub-item">
-              <img src="./assets/images/gallery.png" alt="Dev Simplified" />
-              <span>Dev Simplified</span>
-            </div>
-            <div class="sub-item">
-              <img src="./assets/images/gallery.png" alt="Low Level Graphics" />
-              <span>Low Level Graphics</span>
-            </div>
-            <div class="sub-item">
-              <img src="./assets/images/gallery.png" alt="Engine Talk" />
-              <span>Engine Talk</span>
-            </div>
-            <!-- Add more test channels -->
+      <div class="mobile-subscriptions">
+        <h4>Subscriptions</h4>
+        <div class="subs-list">
+          <div class="sub-item">
+            <img src="./assets/images/gallery.png" alt="SolsticeMara" />
+            <span>SolsticeMara</span>
           </div>
+          <div class="sub-item">
+            <img src="./assets/images/gallery.png" alt="Dev Simplified" />
+            <span>Dev Simplified</span>
+          </div>
+          <div class="sub-item">
+            <img src="./assets/images/gallery.png" alt="Low Level Graphics" />
+            <span>Low Level Graphics</span>
+          </div>
+          <div class="sub-item">
+            <img src="./assets/images/gallery.png" alt="Engine Talk" />
+            <span>Engine Talk</span>
+          </div>
+          <div class="sub-item">
+            <img src="./assets/images/gallery.png" alt="SolsticeMara" />
+            <span>SolsticeMara</span>
+          </div>
+          <div class="sub-item">
+            <img src="./assets/images/gallery.png" alt="Dev Simplified" />
+            <span>Dev Simplified</span>
+          </div>
+          <div class="sub-item">
+            <img src="./assets/images/gallery.png" alt="Low Level Graphics" />
+            <span>Low Level Graphics</span>
+          </div>
+          <div class="sub-item">
+            <img src="./assets/images/gallery.png" alt="Engine Talk" />
+            <span>Engine Talk</span>
+          </div>
+          <div class="sub-item">
+            <img src="./assets/images/gallery.png" alt="SolsticeMara" />
+            <span>SolsticeMara</span>
+          </div>
+          <div class="sub-item">
+            <img src="./assets/images/gallery.png" alt="Dev Simplified" />
+            <span>Dev Simplified</span>
+          </div>
+          <div class="sub-item">
+            <img src="./assets/images/gallery.png" alt="Low Level Graphics" />
+            <span>Low Level Graphics</span>
+          </div>
+          <div class="sub-item">
+            <img src="./assets/images/gallery.png" alt="Engine Talk" />
+            <span>Engine Talk</span>
+          </div>
+          <!-- Add more test channels -->
         </div>
       </div>
     </div>
+  </div>
 
-    <script src="app.js"></script>
-  </body>
+  <script src="app.js"></script>
+</body>
+
 </html>
 
 <!-- <!doctype html>

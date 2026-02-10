@@ -80,6 +80,7 @@ body {
 }
 
 .menu-btn {
+  display: none;
   font-size: 20px;
   cursor: pointer;
   margin-right: 16px;
@@ -453,6 +454,10 @@ body {
     width: fit-content;
   }
 
+  .menu-btn{
+    display: none;
+  }
+
   .sidebar-item {
     padding: 10px;
     text-align: center;
@@ -468,6 +473,10 @@ body {
 @media (max-width: 768px) {
   .nav-center input {
     width: 200px;
+  }
+
+  .menu-btn{
+    display:block;
   }
 
   /* SideBar */
