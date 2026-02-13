@@ -9,22 +9,20 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://127.0.0.1:5501",
+    origin: (origin, callback) => {
+      const allowed = ["http://localhost:5501", "http://127.0.0.1:5501"];
+      if (!origin || allowed.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
   }),
 );
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/uploads", express.static(path.join(__dirname, "../uploads")));
-
-// Serve HTML files from root
-app.get("/", (req, res) => res.sendFile(path.join(__dirname, "../index.html")));
-app.get("/upload", (req, res) =>
-  res.sendFile(path.join(__dirname, "../upload.html")),
-);
-app.get("/video/:id", (req, res) =>
-  res.sendFile(path.join(__dirname, "../video.html")),
-);
 
 // API routes
 app.use("/videos", videoRoutes);

@@ -1,145 +1,378 @@
 <!doctype html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <title>YouTube Clone</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles.css" />
-</head>
-
-<body>
-  <!-- Top Nav -->
-  <header class="top-nav">
-    <div class="nav-left">
-      <div class="menu-btn">☰</div>
-      <div class="logo">MyTube</div>
-    </div>
-
-    <div class="nav-center">
-      <input type="text" placeholder="Search" />
-      <button class="search-btn">
-        <!-- <img src="./assets/images/search-alt-svgrepo-com.svg" alt="Search" /> -->
-        🔍
-      </button>
-    </div>
-
-    <div class="nav-right">
-      <div class="avatar">L</div>
-    </div>
-  </header>
-
-  <div class="layout">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <div class="sidebar-item active">Home</div>
-      <div class="sidebar-item">Shorts</div>
-      <div class="sidebar-item">Subscriptions</div>
-      <hr />
-      <div class="sidebar-item">Library</div>
-      <div class="sidebar-item">History</div>
-    </aside>
-
-    <!-- Main Content -->
-    <main class="content">
-      <div id="video-grid" class="video-grid">
-        <!-- JS will render videos here -->
-      </div>
-    </main>
-
-    <div class="mobile-sidebar">
-      <div class="mobile-menu">
-        <div class="mobile-item active">Home</div>
-        <div class="mobile-item">Shorts</div>
-        <div class="mobile-item">Subscriptions</div>
-        <div class="mobile-item">Library</div>
-        <div class="mobile-item">History</div>
-      </div>
-
-      <div class="mobile-subscriptions">
-        <h4>Subscriptions</h4>
-        <div class="subs-list">
-          <div class="sub-item">
-            <img src="./assets/images/gallery.png" alt="SolsticeMara" />
-            <span>SolsticeMara</span>
-          </div>
-          <div class="sub-item">
-            <img src="./assets/images/gallery.png" alt="Dev Simplified" />
-            <span>Dev Simplified</span>
-          </div>
-          <div class="sub-item">
-            <img src="./assets/images/gallery.png" alt="Low Level Graphics" />
-            <span>Low Level Graphics</span>
-          </div>
-          <div class="sub-item">
-            <img src="./assets/images/gallery.png" alt="Engine Talk" />
-            <span>Engine Talk</span>
-          </div>
-          <div class="sub-item">
-            <img src="./assets/images/gallery.png" alt="SolsticeMara" />
-            <span>SolsticeMara</span>
-          </div>
-          <div class="sub-item">
-            <img src="./assets/images/gallery.png" alt="Dev Simplified" />
-            <span>Dev Simplified</span>
-          </div>
-          <div class="sub-item">
-            <img src="./assets/images/gallery.png" alt="Low Level Graphics" />
-            <span>Low Level Graphics</span>
-          </div>
-          <div class="sub-item">
-            <img src="./assets/images/gallery.png" alt="Engine Talk" />
-            <span>Engine Talk</span>
-          </div>
-          <div class="sub-item">
-            <img src="./assets/images/gallery.png" alt="SolsticeMara" />
-            <span>SolsticeMara</span>
-          </div>
-          <div class="sub-item">
-            <img src="./assets/images/gallery.png" alt="Dev Simplified" />
-            <span>Dev Simplified</span>
-          </div>
-          <div class="sub-item">
-            <img src="./assets/images/gallery.png" alt="Low Level Graphics" />
-            <span>Low Level Graphics</span>
-          </div>
-          <div class="sub-item">
-            <img src="./assets/images/gallery.png" alt="Engine Talk" />
-            <span>Engine Talk</span>
-          </div>
-          <!-- Add more test channels -->
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script src="app.js"></script>
-</body>
-
-</html>
-
-<!-- <!doctype html>
-<html>
   <head>
-    <title>YouTube Clone</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="app.css" />
+    <title>Streamer</title>
   </head>
   <body>
-    <h1>Videos</h1>
-    <div id="video-list"></div>
+    <header>
+      <div class="nav-group group-1">
+        <button class="nav-btn nav-menu">
+          <div class="nav-icon-container">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              viewBox="0 0 24 24"
+              focusable="false"
+              aria-hidden="true"
+            >
+              <path
+                d="M20 5H4a1 1 0 000 2h16a1 1 0 100-2Zm0 6H4a1 1 0 000 2h16a1 1 0 000-2Zm0 6H4a1 1 0 000 2h16a1 1 0 000-2Z"
+              ></path>
+            </svg>
+          </div>
+        </button>
+        <div class="logo">Streamer</div>
+      </div>
+      <div class="nav-group group-2">
+        <input type="text" placeholder="Search" />
+        <button class="nav-btn nav-search">
+          <div class="nav-icon-container">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              viewBox="0 0 24 24"
+              focusable="false"
+              aria-hidden="true"
+              style="
+                pointer-events: none;
+                display: inherit;
+                width: 100%;
+                height: 100%;
+              "
+            >
+              <path
+                d="M11 2a9 9 0 105.641 16.01.966.966 0 00.152.197l3.5 3.5a1 1 0 101.414-1.414l-3.5-3.5a1 1 0 00-.197-.153A8.96 8.96 0 0020 11a9 9 0 00-9-9Zm0 2a7 7 0 110 14 7 7 0 010-14Z"
+              ></path>
+            </svg>
+          </div>
+        </button>
+        <button class="nav-btn voice-search">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            fill="currentColor"
+          >
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"
+            />
+            <path
+              d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="nav-group group-3">
+        <button class="nav-btn notifications">
+          <div class="nav-icon-container">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+              focusable="false"
+              aria-hidden="true"
+              style="
+                pointer-events: none;
+                display: inherit;
+                width: 100%;
+                height: 100%;
+              "
+            >
+              <path
+                d="M16 19a4 4 0 11-8 0H4.765C3.21 19 2.25 17.304 3.05 15.97l1.806-3.01A1 1 0 005 12.446V8a7 7 0 0114 0v4.446c0 .181.05.36.142.515l1.807 3.01c.8 1.333-.161 3.029-1.716 3.029H16ZM12 3a5 5 0 00-5 5v4.446a3 3 0 01-.428 1.543L4.765 17h14.468l-1.805-3.01A3 3 0 0117 12.445V8a5 5 0 00-5-5Zm-2 16a2 2 0 104 0h-4Z"
+              ></path>
+            </svg>
+          </div>
+        </button>
+        <button class="nav-btn avatar">
+          <div class="nav-image-container">
+            <img src="./assets/images/2.jpg" alt="Profile Image button" />
+          </div>
+        </button>
+      </div>
+    </header>
+
+    <div class="layout">
+      <div class="side-menu">
+        <div class="side-menu-btn home">
+          <div class="side-menu-btn-container">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+              focusable="false"
+              aria-hidden="true"
+              style="
+                pointer-events: none;
+                display: inherit;
+                width: 100%;
+                height: 100%;
+              "
+            >
+              <path
+                d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1Zm0 2a9 9 0 016.447 15.276 7 7 0 00-12.895 0A9 9 0 0112 3Zm0 2a4 4 0 100 8 4 4 0 000-8Zm0 2a2 2 0 110 4 2 2 0 010-4Zm-.1 9.001L11.899 16a5 5 0 014.904 3.61A8.96 8.96 0 0112 21a8.96 8.96 0 01-4.804-1.391 5 5 0 014.704-3.608Z"
+              ></path>
+            </svg>
+          </div>
+          <h3>Home</h3>
+        </div>
+        <div class="side-menu-btn shorts">
+          <div class="side-menu-btn-container">
+            <div
+              style="
+                width: 100%;
+                height: 100%;
+                display: block;
+                fill: currentcolor;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                focusable="false"
+                aria-hidden="true"
+                style="
+                  pointer-events: none;
+                  display: inherit;
+                  width: 100%;
+                  height: 100%;
+                "
+              >
+                <path
+                  d="m13.467 1.19-8 4.7a5 5 0 00-.255 8.46 5 5 0 005.32 8.462l8-4.7a5 5 0 00.258-8.462 5 5 0 001.641-6.464l-.12-.217a5 5 0 00-6.844-1.78m5.12 2.79a2.999 2.999 0 01-1.067 4.107l-1.327.78a1 1 0 00.096 1.775l.943.423a3 3 0 01.288 5.323l-8 4.7a3 3 0 01-3.039-5.173l1.327-.78a1 1 0 00-.097-1.775l-.942-.423a3 3 0 01-.288-5.323l8-4.7a3 3 0 014.106 1.066ZM15 12l-5-3v6l5-3Z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <p>Shorts</p>
+        </div>
+        <div class="side-menu-btn subscriptions">
+          <div class="side-menu-btn-container">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+              focusable="false"
+              aria-hidden="true"
+              style="
+                pointer-events: none;
+                display: inherit;
+                width: 100%;
+                height: 100%;
+              "
+            >
+              <path
+                d="M18 1H6a2 2 0 00-2 2h16a2 2 0 00-2-2Zm3 4H3a2 2 0 00-2 2v13a2 2 0 002 2h18a2 2 0 002-2V7a2 2 0 00-2-2ZM3 20V7h18v13H3Zm13-6.5L10 10v7l6-3.5Z"
+              ></path>
+            </svg>
+          </div>
+          <h3>Subscriptions</h3>
+        </div>
+        <div class="side-menu-btn you">
+          <div class="side-menu-btn-container">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+              focusable="false"
+              aria-hidden="true"
+              style="
+                pointer-events: none;
+                display: inherit;
+                width: 100%;
+                height: 100%;
+              "
+            >
+              <path
+                d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1Zm0 2a9 9 0 016.447 15.276 7 7 0 00-12.895 0A9 9 0 0112 3Zm0 2a4 4 0 100 8 4 4 0 000-8Zm0 2a2 2 0 110 4 2 2 0 010-4Zm-.1 9.001L11.899 16a5 5 0 014.904 3.61A8.96 8.96 0 0112 21a8.96 8.96 0 01-4.804-1.391 5 5 0 014.704-3.608Z"
+              ></path>
+            </svg>
+          </div>
+          <p>You</p>
+        </div>
+      </div>
+
+      <!-- Where video grid will be -->
+      <section class="content">
+        <div class="content-tab" id="home-tab">
+          <div class="video-grid"></div>
+        </div>
+        <div class="content-tab" id="shorts-tab">
+          <div class="shorts-scroll"></div>
+        </div>
+
+        <div class="content-tab" id="subscriptions-tab">
+          <div class="video-grid"></div>
+        </div>
+        <div class="content-tab" id="you-tab">
+          <div class="video-grid"></div>
+        </div>
+      </section>
+    </div>
 
     <script>
-      fetch("/videos")
-        .then((res) => res.json())
-        .then((videos) => {
-          const list = document.getElementById("video-list");
-          videos.forEach((v) => {
-            const link = document.createElement("a");
-            link.href = "/video/" + v.id;
-            link.textContent = v.title;
-            list.appendChild(link);
-            list.appendChild(document.createElement("br"));
-          });
-        });
+      // --- YOUR ORIGINAL TAB SWITCHING LOGIC (UNTOUCHED) ---
+      const homeTab = document.getElementById("home-tab");
+      const shortsTab = document.getElementById("shorts-tab");
+      const subscriptionsTab = document.getElementById("subscriptions-tab");
+      const youTab = document.getElementById("you-tab");
+
+      const homeBtn = document.querySelector(".side-menu-btn.home");
+      const shortsBtn = document.querySelector(".side-menu-btn.shorts");
+      const subscriptionsBtn = document.querySelector(
+        ".side-menu-btn.subscriptions",
+      );
+      const youBtn = document.querySelector(".side-menu-btn.you");
+
+      function hideAllTabs() {
+        homeTab.style.display = "none";
+        shortsTab.style.display = "none";
+        subscriptionsTab.style.display = "none";
+        youTab.style.display = "none";
+      }
+
+      homeBtn.addEventListener("click", () => {
+        hideAllTabs();
+        homeTab.style.display = "block";
+        fetchTabContent("home", "#home-tab .video-grid", false);
+      });
+
+      shortsBtn.addEventListener("click", () => {
+        hideAllTabs();
+        shortsTab.style.display = "block";
+        fetchTabContent("shorts", ".shorts-scroll", true);
+      });
+
+      subscriptionsBtn.addEventListener("click", () => {
+        hideAllTabs();
+        subscriptionsTab.style.display = "block";
+        fetchTabContent(
+          "subscriptions",
+          "#subscriptions-tab .video-grid",
+          false,
+        );
+      });
+
+      youBtn.addEventListener("click", () => {
+        hideAllTabs();
+        youTab.style.display = "block";
+        fetchTabContent("library", "#you-tab .video-grid", false);
+      });
+
+      // Set default tab to home
+      hideAllTabs();
+      homeTab.style.display = "block";
+      fetchTabContent("home", "#home-tab .video-grid", false);
+
+      // --- NEW ASYNC LOADING LOGIC ---
+
+      async function fetchTabContent(endpoint, containerSelector, isShort) {
+        const container = document.querySelector(containerSelector);
+        if (!container) return;
+
+        // 1. Show original skeletons first
+        renderSkeletons(container, isShort);
+
+        try {
+          // 2. Fetch data from your Express Mock Route
+          const response = await fetch(
+            `http://localhost:3000/api/mock/${endpoint}`,
+          );
+          const data = await response.json();
+
+          // 3. Wait 2 seconds (to simulate your requested loading state)
+          setTimeout(() => {
+            container.innerHTML = ""; // Clear skeletons
+
+            data.forEach((video) => {
+              const div = document.createElement("div");
+
+              if (!isShort) {
+                div.classList.add("video-card");
+                div.innerHTML = `
+                <div class="thumbnail">
+                   <img src="${video.thumbnail}" alt="${video.title}" style="width:100%; border-radius:12px;">
+                </div>
+                <div class="video-info">
+                  <div class="channel-avatar" style="background-image: url('${video.avatar}'); background-size: cover;"></div>
+                  <div class="video-text">
+                    <h4>${video.title}</h4>
+                    <p>${video.channel}</p>
+                    <p>${video.views} • ${video.uploaded || "Just now"}</p>
+                  </div>
+                </div>`;
+              } else {
+                div.classList.add("short");
+                div.innerHTML = `
+              <div class="short-video" style="background-image: url('${video.thumbnail}'); background-size: cover;"></div>
+              <div class="short-ui">
+                <div class="short-info">
+                  <p class="short-title">${video.title}</p>
+                  <p class="short-channel">${video.channel}</p>
+                </div>
+                <div class="short-actions">
+                  <button class="action"></button>
+                  <button class="action"></button>
+                  <button class="action"></button>
+                  <button class="action"></button>
+                </div>
+              </div>`;
+              }
+              container.appendChild(div);
+            });
+          }, 2000);
+        } catch (err) {
+          console.error("Failed to fetch data:", err);
+        }
+      }
+
+      // Helper to draw the skeletons based on your original template
+      function renderSkeletons(container, isShort) {
+        container.innerHTML = "";
+        const count = isShort ? 5 : 25;
+        for (let i = 0; i < count; i++) {
+          const skeleton = document.createElement("div");
+          skeleton.classList.add(isShort ? "short" : "video-card");
+          skeleton.innerHTML = isShort
+            ? `
+         <div class="short-video skeleton"></div>
+         <div class="short-ui">
+           <div class="short-info skeleton-text">
+             <p class="short-title"></p>
+             <p class="short-channel"></p>
+           </div>
+           <div class="short-actions">
+             <button class="action skeleton-circle"></button>
+             <button class="action skeleton-circle"></button>
+             <button class="action skeleton-circle"></button>
+             <button class="action skeleton-circle"></button>
+           </div>
+         </div>`
+            : `
+         <div class="thumbnail video-skeleton"></div>
+         <div class="video-info">
+           <div class="channel-avatar"></div>
+           <div class="video-text">
+             <h4></h4>
+             <p></p>
+             <p></p>
+           </div>
+         </div>`;
+          container.appendChild(skeleton);
+        }
+      }
     </script>
   </body>
-</html> -->
+</html>
